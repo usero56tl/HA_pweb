@@ -6,7 +6,8 @@
 	}
 	else {
 		if((!isset($_SESSION['profil'])) || count($_GET) == 0) {
-			
+			$controle = "";
+			$action="ident";
 		}
 	}
 ?>
