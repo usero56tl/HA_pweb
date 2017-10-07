@@ -6,8 +6,18 @@
 	}
 	else {
 		if((!isset($_SESSION['profil'])) || count($_GET) == 0) {
-			$controle = "";
-			$action="ident";
+			
+			// Choix controle permettra de savoir si l'utilisateur est un prof ou un eleve
+			require("choixControle.html");
 		}
+		else {
+			if(isset($_GET['controle']) && isset($_GET['action'])) {
+				$controle = $_GET['controle'];
+				$action = $_GET['action'];
+			}
+		}
+		
+		require('./C/' . $controle . '.php');
+		$action();
 	}
 ?>
