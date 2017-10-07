@@ -8,7 +8,7 @@
 		if((!isset($_SESSION['profil'])) || count($_GET) == 0) {
 			
 			// Choix controle permettra de savoir si l'utilisateur est un prof ou un eleve
-			require("choixControle.html");
+			require("./V/choixControle.html");
 		}
 		else {
 			if(isset($_GET['controle']) && isset($_GET['action'])) {
