@@ -1,17 +1,66 @@
-.bouton a {
-  display: block;
-  width:150px;
-  line-height:50px;
-  text-align:center;
-  vertical-align:middle;
-  background:red;
-  color:white;
-  text-decoration:none;
-  }
+form{
+	font-family:inherit;
+	font-size:100%;
+	font: normal 13px/1 Verdana, Helvetica;
+	margin:0;
+	width: 100%;
+	color: #666;
+	margin: 0 0 30px 0;
+    letter-spacing: 2px;
+	display:inline;
+	padding-top:10px;
+	}
 
+
+img{
+	padding-top:0;
+	width:425px;
+	height:auto;
+}
+label{
+	height:auto;
+	display:inline;
+	width:160px;
+	padding-bottom:4px;
+}
+input{
+	display:inline;
+	width:160px;
+	padding-bottom:4px;
 }
 
-.bouton a:hover {
-  font-style: italic;
-  
+button {
+	display:inline;
+	width:110px;
+}
+h1 {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0 rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    text-align: center;
+    color: #666;
+    margin: 0 0 30px 0;
+    letter-spacing: 4px;
+    font: normal 26px/1 Verdana, Helvetica;
+    position: relative;
+	padding-top:5%;
+}
+
+h1:after, 
+h1:before {
+    background-color: #666;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 60%;
+    width: 200px;  ;
+}
+
+h1:after {      
+    right: 0;
+}
+
+h1:before {
+    background-image: linear-gradient(right, #777, #fff);
+    left: 0;
+	
 }
