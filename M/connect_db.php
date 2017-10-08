@@ -1,5 +1,5 @@
 <?php
-	require("./V/config_db.php");
+	require("./M/config_db.php");
 
 	try {
 		$strConnect = 'mysql:host=$host;dbname=$db';
