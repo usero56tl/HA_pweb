@@ -25,4 +25,12 @@
 			}
 		}
 	}
+
+	function verifSyntaxIdent($user, $pwd, &$err) {
+		// TODO preg_match ...
+	}
+
+	function accueil() {
+		require("./V/eleve/accueil.tpl");
+	}
 ?>
