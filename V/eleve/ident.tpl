@@ -13,11 +13,11 @@
 	
   //page de connexion 
 	<body>
-		<form action="Login" method="post">
+		<form action="index.php?controle=eleve&action=ident" method="post">
 			<center>
 				<div>
-					<label for="id"> Identifiant : </label>
-					<input  type="text" id="id"/> 
+					<label for="user"> Identifiant : </label>
+					<input  type="text" id="user"/> 
 				</div>
 		
 				<div>
