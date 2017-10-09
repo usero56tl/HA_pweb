@@ -3,8 +3,8 @@
  * Controller des étudiants
  */
 	function ident() {
-		$user=isset($_POST['user'])?trim($_POST['user']):'';
-		$user=isset($_POST['pwd'])?trim($_POST['pwd']):'';
+		$loginIdent=isset($_POST['user'])?trim($_POST['user']):'';
+		$pwdIdent=isset($_POST['pwd'])?trim($_POST['pwd']):'';
 		$msg='';
 		$profil = array();
 		
@@ -14,7 +14,7 @@
 			require("./V/eleve/ident.tpl");
 		}
 		else {
-			if(verifSyntaxIdent($user, $pwd, $err) && verifIdent($user, $pwd, $profil)) {
+			if(verifSyntaxIdent($loginIdent, $pwdIdent, $err) && verifIdent($user, $pwd, $profil)) {
 				$_SESSION['profil'] = $profil;
 				$nextURL = "index.php?controle=etudiant&action=accueil";
 				header("Location:" . $nextURL);
@@ -26,7 +26,7 @@
 		}
 	}
 
-	function verifSyntaxIdent($user, $pwd, &$err) {
+	function verifSyntaxIdent($loginIdent, $pwdIdent, &$err) {
 		// TODO preg_match ...
 	}
 
