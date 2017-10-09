@@ -27,7 +27,7 @@
 	}
 
 	function verifSyntaxIdent($loginIdent, $pwdIdent, &$err) {
-		if(!preg_match("", $loginIdent)) {
+		if(!preg_match("[[:alpha:][:digit:]]{2,30}", $loginIdent)) {
 			$err = "Erreur de syntaxe du login";
 			return false;
 		}
