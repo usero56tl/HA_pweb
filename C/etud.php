@@ -27,7 +27,16 @@
 	}
 
 	function verifSyntaxIdent($loginIdent, $pwdIdent, &$err) {
-		// TODO preg_match ...
+		if(!preg_match("", $loginIdent)) {
+			$err = "Erreur de syntaxe du login";
+			return false;
+		}
+		if(!preg_match("", $pwdIdent)) {
+			$err = "Erreur de syntaxe du mot de passe";
+			return false;
+		}
+		
+		return true;
 	}
 
 	function accueil() {
