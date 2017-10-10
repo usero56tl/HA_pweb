@@ -14,15 +14,21 @@
 			require("./V/eleve/ident.tpl");
 		}
 		else {
-			if(verifSyntaxIdent($loginIdent, $pwdIdent, $err) && verifIdent($user, $pwd, $profil)) {
-				$_SESSION['profil'] = $profil;
-				$nextURL = "index.php?controle=etudiant&action=accueil";
-				header("Location:" . $nextURL);
+			if(verifSyntaxIdent($loginIdent, $pwdIdent, $err)) {
+				if(verifIdent($user, $pwd, $profil)) {
+					$_SESSION['profil'] = $profil;
+					$nextURL = "index.php?controle=etudiant&action=accueil";
+					header("Location:" . $nextURL);
+				}
+				else {
+					$msg = "Erreur d'authentification";
+				}
 			}
 			else {
 				$msg = $err;
-				require("./V/eleve/ident.tpl");
 			}
+			// Réaffiche la page de login en cas d'erreur
+			require("./V/eleve/ident.tpl");
 		}
 	}
 
