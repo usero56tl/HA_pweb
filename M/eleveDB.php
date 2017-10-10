@@ -7,6 +7,11 @@
 		$queryIdent->execute(['logEtu' => $login, 'passEtu' => $pwd]);
 		
 		// Si l'étudiant existe renvoie true
-		return $queryIdent->rowCount();
+		if($queryIdent->rowCount()) {
+			$profil['user'] = $queryIdent->fetchALL(PDO::FETCH_BOTH);
+			return true;
+		}
+		
+		return false;
 	}
 ?>
