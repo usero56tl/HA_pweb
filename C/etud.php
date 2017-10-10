@@ -50,6 +50,6 @@
 	}
 
 	function accueil() {
-		require("./V/eleve/accueil.tpl");
+		require("./V/accueil.html");
 	}
 ?>
