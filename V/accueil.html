@@ -8,12 +8,18 @@
 		
 	</head>
 	<body>
-		<?php require("V/menu.tpl"); ?>
+		<?php
+			// Chargement du menu de l'utilisateur connecté
+			if($_SESSION['statut'] == "etudiant") {
+				require("./V/etudiant/menu.tpl");
+			}
+			else {
+				require("./V/prof/menu.tpl");
+			}
+		?>
 		<h1>Bienvenue sur le QCM Descartes</h1>
 		
-			<p> 
-				<a href="connect.tpl"> <button type="default" class="btn"> Connectez-vous ici </button> </a>
-			</p>
+			
 		
 		<script src="js/bootstrap.min.js">
 	</body>
