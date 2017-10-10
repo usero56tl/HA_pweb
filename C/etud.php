@@ -14,7 +14,10 @@
 			require("./V/eleve/ident.tpl");
 		}
 		else {
+			// Vérifie la syntaxe des entrées
 			if(verifSyntaxIdent($loginIdent, $pwdIdent, $err)) {
+				
+				// Vérifie si l'utilisateur est dans la base
 				if(verifIdent($user, $pwd, $profil)) {
 					$_SESSION['profil'] = $profil;
 					$nextURL = "index.php?controle=etudiant&action=accueil";
