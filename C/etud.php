@@ -20,6 +20,7 @@
 				// Vérifie si l'utilisateur est dans la base
 				if(verifIdent($user, $pwd, $profil)) {
 					$_SESSION['profil'] = $profil;
+					$_SESSION['statut'] = "etudiant";
 					$nextURL = "index.php?controle=etudiant&action=accueil";
 					header("Location:" . $nextURL);
 				}
