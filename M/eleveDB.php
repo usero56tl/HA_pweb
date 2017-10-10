@@ -9,9 +9,11 @@
 		// Si l'étudiant existe renvoie true
 		if($queryIdent->rowCount()) {
 			$profil['user'] = $queryIdent->fetchALL(PDO::FETCH_BOTH);
+			$queryIdent->closeCursor();
 			return true;
 		}
 		
+		$queryIdent->closeCursor();
 		return false;
 	}
 ?>
