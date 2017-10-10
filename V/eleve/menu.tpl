@@ -9,7 +9,8 @@
 			<a class="brand">QCM Descartes</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li><a href=""></a></li>
+					<li><a href="">Commencer un test</a></li>
+					<li><a href="">Consulter les resultats</a></li>
 				</ul>
 			</div>
 		</div>
