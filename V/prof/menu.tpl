@@ -9,10 +9,12 @@
 			<a class="brand">QCM Descartes</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li><a href="">Cr&eacuteer un QCM</a></li>
-					<li><a href="">Lancer un test</a></li>
-					<li><a href="">Suivre le test</a></li>
-					<li><a href="">Consulter les résultats</a></li>
+					<li><a href="index.php?controle=prof&action=creerQCM">Cr&eacuteer un QCM</a></li>
+					<li><a href="index.php?controle=prof&action=modifQCM">Modifier un QCM</a></li>
+					<li><a href="index.php?controle=prof&action=lancerTest">Lancer un test</a></li>
+					<li><a href="index.php?controle=prof&action=suivreTest">Suivre le test</a></li>
+					<li><a href="index.php?controle=prof&action=consultResult">Consulter les résultats</a></li>
+					<li><a href="index.php?controle=utilisateur&action=deconnect">D&eacuteconnexion</a></li>
 				</ul>
 			</div>
 		</div>
