@@ -37,4 +37,12 @@
 		}
 	}
 
+	function startTest() {
+		
+	}
+
+	function consultResult() {
+		
+	}
+
 ?>
