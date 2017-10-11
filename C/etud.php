@@ -9,6 +9,7 @@
 		$profil = array();
 		
 		require("./M/eleveDB.php");
+		require("./C.utilisateur.php");
 		
 		if(count($_POST) == 0) {
 			require("./V/eleve/ident.tpl");
@@ -34,19 +35,6 @@
 			// Réaffiche la page de login en cas d'erreur
 			require("./V/eleve/ident.tpl");
 		}
-	}
-
-	function verifSyntaxIdent($loginIdent, $pwdIdent, &$err) {
-		if(!preg_match("[[:alpha:][:digit:]]{2,30}", $loginIdent)) {
-			$err = "Erreur de syntaxe du login";
-			return false;
-		}
-		if(!preg_match("", $pwdIdent)) {
-			$err = "Erreur de syntaxe du mot de passe";
-			return false;
-		}
-		
-		return true;
 	}
 
 	function accueil() {
