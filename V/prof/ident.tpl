@@ -11,7 +11,7 @@
 	  <h1>QCM en Ligne</h1>
 	<img src="img/iut-paris.jpg" alt="iut paris descartes" >
 	
-  //page de connexion 
+  <!--page de connexion -->
 	<body>
 		<form action="index.php?controle=utilisateur&action=ident" method="post">
 			<center>
