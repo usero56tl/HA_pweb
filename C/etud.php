@@ -22,7 +22,7 @@
 				if(verifIdent($user, $pwd, $profil)) {
 					$_SESSION['profil'] = $profil;
 					$_SESSION['statut'] = "etudiant";
-					$nextURL = "index.php?controle=etudiant&action=accueil";
+					$nextURL = "index.php?controle=utilisateur&action=accueil";
 					header("Location:" . $nextURL);
 				}
 				else {
@@ -37,7 +37,4 @@
 		}
 	}
 
-	function accueil() {
-		require("./V/accueil.html");
-	}
 ?>
