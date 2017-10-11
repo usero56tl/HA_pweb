@@ -9,7 +9,7 @@
 	
 	 <center>
 	  <h1>QCM en Ligne</h1>
-	<img src="img/iut-paris.jpg" alt="iut paris descartes" >
+	<img src="../img/iut-paris.jpg" alt="iut paris descartes" >
 	
   <!--page de connexion -->
 	<body>
