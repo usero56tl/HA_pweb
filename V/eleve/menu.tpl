@@ -9,8 +9,8 @@
 			<a class="brand">QCM Descartes</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li><a href="index.php?controle=etudiant&action=startTest">Commencer un test</a></li>
-					<li><a href="index.php?controle=etudiant&action=consultResult">Consulter les resultats</a></li>
+					<li><a href="index.php?controle=etud&action=startTest">Commencer un test</a></li>
+					<li><a href="index.php?controle=etud&action=consultResult">Consulter les resultats</a></li>
 				</ul>
 			</div>
 		</div>
