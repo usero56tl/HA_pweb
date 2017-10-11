@@ -9,9 +9,9 @@
 	
 	 <center>
 	  <h1>QCM en Ligne</h1>
-	<img src="img/iut-paris.jpg" alt="iut paris descartes" >
+	<img src="../img/iut-paris.jpg" alt="iut paris descartes" >
 	
-  //page de connexion 
+  <!--page de connexion--> 
 	<body>
 		<form action="index.php?controle=eleve&action=ident" method="post">
 			<center>
