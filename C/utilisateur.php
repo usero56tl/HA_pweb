@@ -15,4 +15,8 @@
 		
 		return true;
 	}
+
+	function accueil() {
+		require("./V/accueil.html");
+	}
 ?>
