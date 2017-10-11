@@ -9,6 +9,7 @@
 		$profil = array();
 		
 		require("./M/profDB.php");
+		require("./C/utilisateur.php");
 		
 		if(count($_POST) == 0) {
 			require("./V/prof/ident.tpl");
@@ -16,7 +17,7 @@
 		else {
 			if(verifSyntaxIdent($loginIdent, $pwdIdent, $err) && verifIdent($user, $pwd, $profil)) {
 				$_SESSION['profil'] = $profil;
-				$nextURL = "index.php?controle=prof&action=accueil";
+				$nextURL = "index.php?controle=utilisateur&action=accueil";
 				header("Location:" . $nextURL);
 			}
 			else {
@@ -24,11 +25,5 @@
 				require("./V/prof/ident.tpl");
 			}
 		}
-	}
-	function verifSyntaxIdent($loginIdent, $pwdIdent, &$err) {
-		// TODO preg_match ...
-	}
-	function accueil() {
-		require("./V/eleve/accueil.tpl");
 	}
 ?>
