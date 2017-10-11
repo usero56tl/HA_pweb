@@ -26,4 +26,24 @@
 			}
 		}
 	}
+
+	function creerQCM() {
+		
+	}
+
+	function modifQCM() {
+		
+	}
+
+	function lancerTest() {
+		
+	}
+
+	function suivreTest() {
+		
+	}
+
+	function consultResult() {
+		
+	}
 ?>
