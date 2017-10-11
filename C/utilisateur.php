@@ -4,11 +4,11 @@
  */
  
  function verifSyntaxIdent($loginIdent, $pwdIdent, &$err) {
-		if(!preg_match("[[:alpha:][:digit:]]{2,30}", $loginIdent)) {
+		if(!preg_match("[a-zA-Z0-9]{2,30}", $loginIdent)) {
 			$err = "Erreur de syntaxe du login";
 			return false;
 		}
-		if(!preg_match("", $pwdIdent)) {
+		if(!preg_match("[a-zA-Z0-9]{2,30}", $pwdIdent)) {
 			$err = "Erreur de syntaxe du mot de passe";
 			return false;
 		}
