@@ -51,7 +51,7 @@ h1:before {
     content: "";
     height: 1px;
     position: absolute;
-    top: 60%;
+    top: 80%;
     width: 200px;  ;
 }
 
