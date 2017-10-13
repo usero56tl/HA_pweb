@@ -9,7 +9,7 @@
 		$profil = array();
 		
 		require("./M/eleveDB.php");
-		require("./C.utilisateur.php");
+		require("./C/utilisateur.php");
 		
 		if(count($_POST) == 0) {
 			require("./V/eleve/ident.tpl");
