@@ -5,7 +5,7 @@
 		require('./V/erreur404.tpl');
 	}
 	else {
-		if((!isset($_SESSION['profil'])) || count($_GET) == 0) {
+		if((!isset($_SESSION['profil'])) && count($_GET) == 0) {
 			
 			// Choix controle permettra de savoir si l'utilisateur est un prof ou un eleve
 			require("./V/choixControle.html");
