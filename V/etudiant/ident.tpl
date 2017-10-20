@@ -20,12 +20,12 @@
 				<center>
 					<div>
 						<label for="id"> Identifiant : </label>
-						<input  type="text" id="id"/> 
+						<input name="user" type="text" id="id"/> 
 					</div>
 			
 					<div>
 						<label for="pwd"> Password : </label>
-						<input  type="password" id="pwd"/> 
+						<input name="pwd" type="password" id="pwd"/> 
 					</div>
 					<div class="button"> 
 						<input type="submit" button type="button" class="btn btn-outline-danger" value="Connexion"/>
