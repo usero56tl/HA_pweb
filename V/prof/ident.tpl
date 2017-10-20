@@ -16,7 +16,7 @@
 		<img src="../img/iut-paris.jpg" alt="iut paris descartes" >
 		
 		<body>
-			<form action="index.php?control=prof&action=ident" method="post">
+			<form action="index.php?controle=prof&action=ident" method="post">
 				<center>
 					<div>
 						<label for="id"> Identifiant : </label>
