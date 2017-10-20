@@ -3,7 +3,7 @@
 		<head>
 		  <meta charset="utf-8">
 		  <title>Connexion</title>
-		  <link rel="stylesheet" href="../css/style.css">
+		  <link rel="stylesheet" href="./V/css/style.css">
 		  <script src="script.js"></script>
 		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
@@ -13,7 +13,7 @@
 		
 		 <center>
 		  <h1>QCM en Ligne</h1>
-		<img src="../img/iut-paris.jpg" alt="iut paris descartes" >
+		<img src="./V/img/iut-paris.jpg" alt="iut paris descartes" >
 		
 		<body>
 			<form action="index.php?controle=prof&action=ident" method="post">
