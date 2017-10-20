@@ -1,13 +1,10 @@
 <?php
 	require("./M/config_db.php");
 
-	try {
-		$strConnect = 'mysql:host=$host;dbname=$db';
-		$pdo = new PDO($strConnect, $login, $password); // Instanciation de la connexion à la base
-		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Renvoie des exceptions en cas d'echec
-	}
-	catch(PDOException $e) {
-		$msg = 'Erreur PDO dans ' . $e.getFile() . ' Ligne ' . $e.getLine() . ' : ' . $e.getMessage();
-		die($msg);
+	if (!isset($link)) {
+		$link = mysqli_connect($host, $loginDB, $passwordDB) 
+		or die ("erreur de connexion :" . mysql_error()); 
+		mysqli_select_db($link, $db) 
+		or die (htmlentities("erreur d'accès à la base :") . $db);
 	}
 ?>
