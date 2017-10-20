@@ -16,11 +16,6 @@
 		// Si l'étudiant existe renvoie true
 		if(mysqli_num_rows ($res) > 0) {
 			$profil = mysqli_fetch_assoc($res);
-			
-				echo ('<br /> dans verif_bd : <br /><pre>'); 
-				print_r ($profil); 
-				echo ('</pre><br />'); 
-			
 			return true;
 		} 
 		else {
