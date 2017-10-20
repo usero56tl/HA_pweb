@@ -15,11 +15,16 @@
 			require("./V/prof/ident.tpl");
 		}
 		else {
-			if(verifSyntaxIdent($loginIdent, $pwdIdent, $err) && verifIdent($user, $pwd, $profil)) {
-				$_SESSION['profil'] = $profil;
-				$_SESSION['statut'] = "professeur";
-				$nextURL = "index.php?controle=utilisateur&action=accueil";
-				header("Location:" . $nextURL);
+			if(verifSyntaxIdent($loginIdent, $pwdIdent, $err)) {
+				if(verifIdent($user, $pwd, $profil)) {
+					$_SESSION['profil'] = $profil;
+					$_SESSION['statut'] = "professeur";
+					$nextURL = "index.php?controle=utilisateur&action=accueil";
+					header("Location:" . $nextURL);
+				}
+				else {
+					$msg = "Erreur d'authentification";
+				}
 			}
 			else {
 				$msg = $err;
