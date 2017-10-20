@@ -17,6 +17,7 @@
 		else {
 			if(verifSyntaxIdent($loginIdent, $pwdIdent, $err) && verifIdent($user, $pwd, $profil)) {
 				$_SESSION['profil'] = $profil;
+				$_SESSION['statut'] = "professeur";
 				$nextURL = "index.php?controle=utilisateur&action=accueil";
 				header("Location:" . $nextURL);
 			}
