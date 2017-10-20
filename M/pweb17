@@ -64,7 +64,8 @@ INSERT INTO `etudiant` (`id_etu`, `genre`, `nom`, `prenom`, `email`, `login_etu`
 (1, 'M.', 'Tor', 'Michaël', 'michael.tor@etu.parisdescartes.fr', 'tor', 'tor', '22701007', '206', '2017-09-01',0),
 (2, 'M.', 'Moustache', 'Félix', 'felix.moustache@etu.parisdescartes.fr', 'moustach', '', '22701011', '207', '2017-09-01',1),
 (3, 'M.', 'Nguyen', 'Rémi', 'paule.nguyen@etuparisdescartes.fr', 'nguyen1', '2aaaaaaa', '22701012', '208', '2017-09-01',0),
-(4, 'Melle.', 'Nguyen', 'Paule', 'paule.nguyen@etuparisdescartes.fr', 'nguyen2', '2aaaaaaa', '22701027', '208', '2017-09-01',0);
+(4, 'Melle.', 'Nguyen', 'Paule', 'paule.nguyen@etuparisdescartes.fr', 'nguyen2', '2aaaaaaa', '22701027', '208', '2017-09-01',0),
+(5, 'M.', 'Chih', 'Samuel', 'chih.samuel@etu.parisdescartes.fr', 'chih', 'chie', '22704455', '206', '2017-09-01',0);
 
 -- --------------------------------------------------------
 
@@ -89,7 +90,8 @@ INSERT INTO `groupe` (`id_grpe`, `num_grpe`) VALUES
 (3, 'gr208'),
 (4, 'gr201-202'),
 (5, 'gr207-208'),
-(6, 'ifetina2');
+(6, 'ifetina2'),
+(7, 'gr206');
 
 
 -- --------------------------------------------------------
@@ -120,7 +122,8 @@ INSERT INTO `grpEtudiants` (`id_grpe`, `id_etu`) VALUES
 (6, 0),
 (6, 1),
 (6, 2),
-(6, 3);
+(6, 3),
+(7, 5);
 
 -- --------------------------------------------------------
 
@@ -144,7 +147,8 @@ CREATE TABLE IF NOT EXISTS `professeur` (
 --
 
 INSERT INTO `professeur` (`id_prof`, `nom`, `prenom`, `email`, `login_prof`, `pass_prof`, `date_prof`) VALUES
-(1, 'Prof', 'Esseur', 'professeur@parisdescartes.fr', 'professeur', 'professeur', '2017-10-01');
+(1, 'Prof', 'Esseur', 'professeur@parisdescartes.fr', 'professeur', 'professeur', '2017-10-01'),
+(2, 'Jean-Michel', 'Crapaud','crapaud.jean-michel@parisdescartes.fr', 'crapaud','coro','2017-9-01');
 
 -- --------------------------------------------------------
 
@@ -188,14 +192,10 @@ CREATE TABLE IF NOT EXISTS `question` (
 --
 
 INSERT INTO `question` (`id_quest`, `id_theme`, `titre`, `texte`, `bmultiple`) VALUES
-(1, 1, 'MVC', 'Que veut dire MVC ?', 0),
-(2, 2, 'MATHS', '1*2=', 0),
-(3, 2, 'maths', '2*2=', 1),
-(4, 1, 'test2ML', 'dfsq', 0),
-(5, 1, 'testmael1110', 'et', 0),
-(6, 1, 'testmael1110', 'et', 0),
-(7, 1, 'testmael1110', 'et', 0),
-(8, 1, 'fdtytuu', 'ertyuy', 1);
+(1, 1, 'php', 'Que veut dire MVC ?', 0),
+(2, 2, 'math', '1*2=', 0),
+(3, 2, 'math', '2*2=', 1),
+(4, 1, 'php', 'À quoi sert "ECHO ?', 0),
 
 -- --------------------------------------------------------
 
@@ -218,7 +218,16 @@ CREATE TABLE IF NOT EXISTS `reponse` (
 INSERT INTO `reponse` (`id_rep`, `id_quest`, `texte_rep`, `bvalide`) VALUES
 (1, 1, 'Modèle Contrôle Vue', 1),
 (2, 1, 'Modélisation Conception Vue', 0),
-(3, 1, 'Modélisation Contrôle Vérification', 0);
+(3, 1, 'Modélisation Contrôle Vérification', 0),
+(4, 2, ' 2 ', 1),
+(5, 2, ' 1 ', 0),
+(6, 2, ' 3 ', 0),
+(7, 3, ' 2 ', 0),
+(8, 3, ' 4 ', 1),
+(9, 3, ' 6 ', 0),
+(10, 4, ' À rien? ', 0),
+(11, 4, ' À afficher? ', 1),
+(12, 4, ' À faires des echos' , 0);
 
 -- --------------------------------------------------------
 
