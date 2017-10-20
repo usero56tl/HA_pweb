@@ -12,7 +12,7 @@
 		require("./C/utilisateur.php");
 		
 		if(count($_POST) == 0) {
-			require("./V/eleve/ident.tpl");
+			require("./V/etudiant/ident.tpl");
 		}
 		else {
 			// Vérifie la syntaxe des entrées
@@ -33,7 +33,7 @@
 				$msg = $err;
 			}
 			// Réaffiche la page de login en cas d'erreur
-			require("./V/eleve/ident.tpl");
+			require("./V/etudiant/ident.tpl");
 		}
 	}
 
