@@ -3,25 +3,29 @@
 		require("./M/connect_db.php");
 		
 		// Requête du login
-		$queryIdent = $pdo->prepare('SELECT login_etu, nom, prenom, email, num_grpe,  
+		$queryIdent = "SELECT login_etu, nom, prenom, email, num_grpe  
 		FROM etudiant 
-		WHERE login_etu = :logEtu AND pass_etu = :passEtu');
+		WHERE login_etu='%s' AND pass_etu='%s'";
 		
-		$queryIdent->execute(['logEtu' => $login, 'passEtu' => $pwd]);
+		$queryFinale = sprintf($queryIdent, $login, $pwd);
+		echo($queryFinale);
+		
+		$res = mysqli_query($link, $queryFinale)	
+		or die (utf8_encode("erreur de requête : ") . $queryFinale); 
 		
 		// Si l'étudiant existe renvoie true
-		if($queryIdent->rowCount()) {
-			$retourQuery = $queryIdent->fetchAll(PDO::FETCH_BOTH);
-			$profil['user'] = $retourQuery[0]['login_etu'];
-			$profil['nom'] = $retourQuery[0]['nom'];
-			$profil['prenom'] = $retourQuery[0]['prenom'];
-			$profil['email'] = $retourQuery[0]['email'];
-			$profil['num_grpe'] = $retourQuery[0]['num_grpe'];
-			$queryIdent->closeCursor();
+		if(mysqli_num_rows ($res) > 0) {
+			$profil = mysqli_fetch_assoc($res);
+			
+				echo ('<br /> dans verif_bd : <br /><pre>'); 
+				print_r ($profil); 
+				echo ('</pre><br />'); 
+			
 			return true;
+		} 
+		else {
+			$profil = null;
+			return false;
 		}
-		
-		$queryIdent->closeCursor();
-		return false;
 	}
 ?>
