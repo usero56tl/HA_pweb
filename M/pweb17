@@ -149,7 +149,10 @@ CREATE TABLE IF NOT EXISTS `qcm` (
 
 INSERT INTO `qcm` (`id_qcm`, `id_test`, `id_quest`, `bAutorise`, `bBloque`) VALUES
 (1, 1, 1, 1, 0),
-(2, 2, 2, 1, 0);
+(2, 2, 2, 1, 0),
+(3, 2, 3, 1, 0),
+(4, 2, 4, 1, 0);
+
 
 -- --------------------------------------------------------
 
@@ -171,10 +174,10 @@ CREATE TABLE IF NOT EXISTS `question` (
 --
 
 INSERT INTO `question` (`id_quest`, `id_theme`, `titre`, `texte`, `bmultiple`) VALUES
-(1, 1, 'php', 'Que veut dire MVC ?', 0),
-(2, 2, 'math', '1*2=', 0),
-(3, 2, 'math', '2*2=', 1),
-(4, 1, 'php', 'À quoi sert "$ECHO ?', 0),
+(1, 1, 'php', 'Que veut dire MVC ?', 3),
+(2, 2, 'math', '1*2=', 3),
+(3, 2, 'math', '2*2=', 3),
+(4, 1, 'php', 'À quoi sert "$ECHO ?', 3),
 
 -- --------------------------------------------------------
 
