@@ -1,8 +1,8 @@
 <?php
 
 $host="localhost";
-$login="root";
-$password="root";
-$db="pweb17";
+$loginDB="couderc1";
+$passwordDB="couderc1";
+$db="pweb17_couderc1";
 
 ?>
