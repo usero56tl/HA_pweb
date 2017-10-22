@@ -20,8 +20,8 @@
             
             // Inscris dans la base que le professeur est connecté
             $queryIdentOK = sprintf("UPDATE professeur SET bConnect = 1 WHERE login_prof='%s' AND pass_prof='%s'", $login, $pwd);
-            mysqli_query($link, $queryIdentOK)
-                or die (utf8_encode("erreur de requête : ") . $queryIdentOK);
+            mysqli_query($link, $queryIdentOK) 
+				or die (utf8_encode("erreur de requête : ") . $queryIdentOK);
 			
 			return true;
 		} 
