@@ -28,8 +28,7 @@
 			}
 			
 			// Si l'utilisateur connecté va sur l'index sans paramètres
-			require('./C/' . $_SESSION['profil']['statut'] . '.php');
-			deconnect();
+			require('./V/accueil.html');
 		}
 		require('./C/' . $controle . '.php');
 		$action();
