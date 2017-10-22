@@ -26,6 +26,10 @@
 				$controle = $_GET['controle'];
 				$action = $_GET['action'];
 			}
+			
+			// Si l'utilisateur connecté va sur l'index sans paramètres
+			require('./C/' . $_SESSION['profil']['statut'] . '.php');
+			deconnect();
 		}
 		require('./C/' . $controle . '.php');
 		$action();
