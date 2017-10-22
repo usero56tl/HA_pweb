@@ -8,7 +8,6 @@
 		WHERE login_etu='%s' AND pass_etu='%s'";
 		
 		$queryFinale = sprintf($queryIdent, $login, $pwd);
-		echo($queryFinale);
 		
 		$res = mysqli_query($link, $queryFinale)	
 		or die (utf8_encode("erreur de requête : ") . $queryFinale); 
