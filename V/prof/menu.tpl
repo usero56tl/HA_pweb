@@ -14,7 +14,7 @@
 					<li><a href="index.php?controle=prof&action=lancerTest">Lancer un test</a></li>
 					<li><a href="index.php?controle=prof&action=suivreTest">Suivre le test</a></li>
 					<li><a href="index.php?controle=prof&action=consultResult">Consulter les résultats</a></li>
-					<li><a href="index.php?controle=utilisateur&action=deconnect">D&eacuteconnexion</a></li>
+					<li><a href="index.php?controle=prof&action=deconnect">D&eacuteconnexion</a></li>
 				</ul>
 			</div>
 		</div>
