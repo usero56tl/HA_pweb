@@ -22,6 +22,6 @@
 
 	function deconnect() {
 		session_destroy();
-		header("./index.php");
+		header("Location:./index.php");
 	}
 ?>
