@@ -37,7 +37,7 @@
 		}
 	}
 
-	function deconnect() {
+	function deconnectEtu() {
         require("./M/eleveDB.php");
         // Déconnexion de l'élève de la base
         deconnectDB($_SESSION['profil']['login_etu'], $_SESSION['profil']['pass_etu']);
