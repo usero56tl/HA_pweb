@@ -11,7 +11,7 @@
 				<ul class="nav">
 					<li><a href="index.php?controle=etudiant&action=startTest">Commencer un test</a></li>
 					<li><a href="index.php?controle=etudiant&action=consultResult">Consulter les resultats</a></li>
-					<li><a href="index.php?controle=etudiant&action=deconnect">Deconnexion</a></li>
+					<li><a href="index.php?controle=etudiant&action=deconnectEtu">Deconnexion</a></li>
 				</ul>
 			</div>
 		</div>
