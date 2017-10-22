@@ -37,6 +37,16 @@
 		}
 	}
 
+	function deconnect() {
+        require("./M/eleveDB.php");
+        // Déconnexion de l'élève de la base
+        deconnectDB($_SESSION['profil']['login_etu'], $_SESSION['profil']['pass_etu']);
+        
+        // Déconnexion de l'utilisateur
+        $nextURL = "index.php?controle=utilisateur&action=deconnect";
+        header("Location:" . $nextURL);
+    }
+
 	function startTest() {
 		
 	}
