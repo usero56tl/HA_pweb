@@ -61,7 +61,11 @@
 	}
 
 	function lancerTest() {
-		
+		require("./M/profDB.php");
+        
+        $tests = fetchTests();
+        
+        require("./V/accueil.tpl");
 	}
 
 	function suivreTest() {
