@@ -42,4 +42,23 @@
         mysqli_query($link, $queryFinale)
             or die(utf8_encode("erreur de requête : ") . $queryFinale);
     }
+
+	function fetchTests() {
+        require("./M/connect_db.php");
+        
+        $queryTests = "SELECT * FROM test;";
+        
+        $resultQueryTests = mysqli_query($link, $queryTests)
+            or die (utf8_encode("Erreur de requête : ") . $queryTests);
+        
+        
+        $listeTests = array();
+        $nbLignes = 0;
+        while($ligne = mysqli_fetch_assoc($resultQueryTests) && $ligne != null) {
+            listeTests[nbLignes] = $ligne;
+            nbLignes++;
+        }
+        
+        return $listeTests;
+    }
 ?>
