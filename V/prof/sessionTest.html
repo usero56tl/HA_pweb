@@ -2,7 +2,7 @@
 	<html lang="fr">
 		<head>
 		  <meta charset="utf-8">
-		  <title>Connexion</title>
+		  <title>QCM</title>
 		  <link rel="stylesheet" href="../css/style.css">
 		  <script src="script.js"></script>
 		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -13,12 +13,11 @@
 		
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5">
-					<div class="test">
-						<div class="button"> 
+				<div class="col-lg-5">			
+					<div class="button">					
 						<input type="submit" button type="button" class="btn btn-outline-danger" value="Thèmes"/>
 					</div>
-					</div>
+			
 				</div>
 				
 				<div class="col-lg-5">
@@ -26,21 +25,57 @@
 						<input type="submit" button type="button" class="btn btn-outline-danger" value="Lancer"/>
 					</div>
 				</div>
-				
-				
+								
 				<div class="col-lg-1 col-lg-offset-11">
 					<div class="button"> 
 						<input type="submit" button type="button" class="btn btn-outline-danger" value="Réponses"/>
 					</div>
+				</div>	
+			</div>			
+		</div>
+		
+		<div class="tester">
+			<div class="question">
+		
+				<div id ="block">			
+					<label class="numQuestion"> 1 </label>
+					<label id="qt"> php => afficher question 1 fazfazazfafzafzafzfazfza  </label>
 				</div>
-					
+				
+				<div id ="block">
+					<label class="numQuestion"> 2 </label>
+					<label id="qt"> php => afficher question 2  </label>
+				</div>
+				
+				<div id ="block">
+					<label class="numQuestion"> 3 </label>
+					<label id="qt"> php => afficher question 3  </label>
+				</div>	
+				
 			</div>
-			
-			
 			
 		</div>
 		
-		
+		<div class="footer">
+				<div id ="bas">			
+					<label class="nomTest"> php -> afficher nom du test </label>
+				</div>
+				
+				<div id ="bas">
+					<label class="prof"> php get nom prof </label>
+				</div>
+				
+				<div id ="bas">
+					<label class="nbgroupe"> php numero du groupe </label>
+				</div>
+				
+				<div id="bas">
+					<div class="button"> 
+						<input type="submit" button type="button" class="btn btn-outline-danger" value="Bilan : Réponses"/>
+					</div>
+				</div>
+			
+		</div>
 		
 		
 	</html>	
