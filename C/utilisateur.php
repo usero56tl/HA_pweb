@@ -16,10 +16,6 @@
 		return true;
 	}
 
-	function accueil() {
-		require("./V/accueil.html");
-	}
-
 	function deconnect() {
 		session_destroy();
 		header("Location:./index.php");
