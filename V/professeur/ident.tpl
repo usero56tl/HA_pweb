@@ -31,6 +31,7 @@
 						<input type="submit" button type="button" class="btn btn-outline-danger" value="Connexion"/>
 						<input type="reset" button type="button" class="btn btn-outline-danger" value="Annuler"/>
 					</div>
+					<p><?php echo($msg); ?></p>
 				</center>
 			</form>
 		
