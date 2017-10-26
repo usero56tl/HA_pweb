@@ -39,7 +39,7 @@
 	}
 
 	function deconnectProf() {
-        require("./M/profDB.php");
+		require("./M/profDB.php");
         // Déconnexion de lu professeur de la base
         deconnectDB($_SESSION['profil']['login_prof'], $_SESSION['profil']['pass_prof']);
         
