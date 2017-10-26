@@ -15,21 +15,16 @@
 				if($_GET['action'] != 'ident') {
 					require('./V/erreur404.tpl');
 				}
-				
-				// Opérations autorisées sans login
-				$controle = $_GET['controle'];
-				$action = $_GET['action'];
 			}
 		}
 		else {
-			if(isset($_GET['controle']) && isset($_GET['action'])) {
-				$controle = $_GET['controle'];
-				$action = $_GET['action'];
-			}
-			
 			// Si l'utilisateur connecté va sur l'index sans paramètres
 			require('./V/accueil.html');
 		}
+		
+		$controle = $_GET['controle'];
+		$action = $_GET['action'];
+		
 		require('./C/' . $controle . '.php');
 		$action();
 	}
