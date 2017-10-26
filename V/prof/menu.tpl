@@ -9,7 +9,7 @@
 			<a class="brand">QCM Descartes</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li><a href="index.php?controle=professeur&action=creerQCM">Cr&eacuteer un QCM</a></li>
+					<li><a href="index.php?controle=professeur&action=creerQCM">Choisir un QCM</a></li> <!--choixTest.html-->
 					<li><a href="index.php?controle=professeur&action=modifQCM">Modifier un QCM</a></li>
 					<li><a href="index.php?controle=professeur&action=lancerTest">Lancer un test</a></li>
 					<li><a href="index.php?controle=professeur&action=suivreTest">Suivre le test</a></li>
