@@ -1,4 +1,8 @@
 <!doctype html>
+<?php
+    global $controle;
+    global $action;
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -10,14 +14,14 @@
 	<body>
 		<?php
 			// Chargement du menu de l'utilisateur connecté
-			if($_SESSION['statut'] == "etudiant") {
-				require("./V/etudiant/menu.tpl");
-			}
-			else {
-				require("./V/prof/menu.tpl");
-			}
+            if($controle != "") {
+                require("./V/" . $GLOBALS['controle'] . "/menu.tpl");
+            }
 		?>
-		<h1>Bienvenue <?php  echo($_SESSION['profil']['prenom'] . " " . $_SESSION['profil']['nom']);  ?></h1>
+        
+        <?php
+			require("./V/" . $GLOBALS['controle'] . "/" . $GLOBALS['action'] . ".tpl");
+		?>
 		
 			
 		
