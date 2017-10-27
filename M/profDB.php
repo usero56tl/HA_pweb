@@ -44,7 +44,7 @@
     }
 
 	function fetchTests() {
-        require("./M/connect_db.php");
+        /*require("./M/connect_db.php");
         
         $queryTests = "SELECT * FROM test;";
         
@@ -59,6 +59,6 @@
             nbLignes++;
         }
         
-        return $listeTests;
+        return $listeTests;*/
     }
 ?>
