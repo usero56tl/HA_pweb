@@ -19,7 +19,7 @@
 		}
 		else {
 			// Si l'utilisateur connecté va sur l'index sans paramètres
-			require('./V/accueil.html');
+			require('./V/accueil.tpl');
 		}
 		
 		$controle = $_GET['controle'];
