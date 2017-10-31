@@ -43,10 +43,11 @@
             or die(utf8_encode("erreur de requête : ") . $queryFinale);
     }
 
-	function fetchTests() {
-        /*require("./M/connect_db.php");
+	function fetchTests($idProf) {
+        require("./M/connect_db.php");
         
-        $queryTests = "SELECT * FROM test;";
+        $queryTests = "SELECT * FROM test WHERE id_prof=%d;";
+        $queryTests = sprintf($queryTests, $idProf);
         
         $resultQueryTests = mysqli_query($link, $queryTests)
             or die (utf8_encode("Erreur de requête : ") . $queryTests);
@@ -54,11 +55,10 @@
         
         $listeTests = array();
         $nbLignes = 0;
-        while($ligne = mysqli_fetch_assoc($resultQueryTests) && $ligne != null) {
-            listeTests[nbLignes] = $ligne;
-            nbLignes++;
+        while($listeTests[$nbLignes] = mysqli_fetch_assoc($resultQueryTests)) {
+            $nbLignes++;
         }
         
-        return $listeTests;*/
+        return $listeTests;
     }
 ?>
