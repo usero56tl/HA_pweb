@@ -27,7 +27,8 @@
 					header("Location:" . $nextURL);
 				}
 				else {
-					$msg = "Erreur d'authentification";
+					$msg = "Mot de passe ou identifiant incorrect";
+					require("./V/accueil.tpl");
 				}
 			}
 			else {
