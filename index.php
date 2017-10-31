@@ -18,8 +18,13 @@
 			}
 		}
 		else {
-			// Si l'utilisateur connecté va sur l'index sans paramètres
-			require('./V/accueil.tpl');
+			if(count($_GET) == 0) {
+                // Si l'utilisateur connecté va sur l'index sans paramètres
+                $controle = $_SESSION['profil']['statut'];
+                $action = "bienvenue";
+                require('./C/' . $controle . '.php');
+                $action();
+            }
 		}
 		
 		$controle = $_GET['controle'];
