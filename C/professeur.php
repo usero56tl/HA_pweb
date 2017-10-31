@@ -64,7 +64,7 @@
 	function lancerTest() {
 		require("./M/profDB.php");
         
-        $tests = fetchTests();
+        $tests = fetchTests($_SESSION['profil']['id_prof']);
         
         require("./V/accueil.tpl");
 	}
