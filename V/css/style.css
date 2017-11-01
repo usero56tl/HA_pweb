@@ -21,7 +21,9 @@ h1:before {
     height: 1px;
     position: absolute;
     top: 80%;
-    width: 200px;  ;
+    width: 200px;
+	
+	
 }
 
 h1:after {      
@@ -53,89 +55,123 @@ img{
 	width:425px;
 	height:auto;
 }
+
 label{
 	height:auto;
 	display:inline;
 	width:160px;
 	padding-bottom:4px;
+	max-width:160px;
+	min-width:100px;
 }
 
 input{
 	display:inline;
 	width:160px;
 	padding-bottom:4px;
+		max-width:160px;
+	min-width:100px;
 }
 
 button {
 	display:inline;
 	width:110px;
+	
 }
 
+
+.container{
+	padding-top:40px;
+	
+}
+
+.bouton{	
+	margin-top:10px;
+	margin-left:168px;
+	margin-right:100px;
+	
+	
+}
 .question{
 	position:absolute;
-	top:30%;
+	top:32px;
 	left:47%;
 	transform: translate(-50%,-50%);
 	display:inline;
-	margin:2%;
-	width : 57%;
+	margin:3px;
+	width : 800px;
+	
+	margin-left:100px;
+	margin-right:100px;
 }	
 
 .question #block{
-	margin-top:3%;	
-	border:1px solid ;
-	margin-bottom:3%;
-	margin-left:2%;
+	margin-top:10px;	
+	border:1px solid;
+	padding-top:10px;
+	margin-bottom:5px;
+	margin-left:10px;
+	margin-right:10px;
+	
 	
 }
 
 #block{	
-	padding-left:8%;
+	padding-left:15px;
 }
 
 #qt {
 	position:relative;
-	left: -5%;
 }
-
+.affichage{
+	margin-left:100px;
+	margin-right:100px;
+	display:inline;
+	
+}
 .numQuestion{
 	color:red;
 }
 	
-.container{
-	padding-top:25px;
-}
 
 .tester{
 	position:relative;
-	margin-top:10%;
+	margin-top:160px;
+	margin-left:100px;
+	margin-right:100px;
 }
 
 .footer{
 	position:relative;
-	padding:15%;
-	margin-top:10%;
+	padding:250px;
+	margin-left:60px;
+	margin-right:60px;
 	
 }
 #bas{
 	display:inline;
 }
+
+
 .button  {
 	display:inline;
-	margin-left:3%
+
 }
 .nomTest{
-	padding-left:2%;
+
 	display:inline;
-	margin-left:3%
+	margin-left:5px;
+	margin-right:5px;
+	
 }
 .prof {
-	padding-left:2%;
+
 	display:inline;
-	margin-left:3%
+	margin-left:5px;
+	margin-right:5px;
 }
 .nbgroupe{
-	padding-left: 2%;
 	display:inline;
-	margin-left:3%
+	margin-left:5px;	
+	margin-right:5px;
 }
