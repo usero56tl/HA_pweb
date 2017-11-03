@@ -28,7 +28,7 @@
 				}
 				else {
 					$msg = "Mot de passe ou identifiant incorrect";
-					require("./V/accueil.tpl");
+                    require("./V/accueil.tpl");
 				}
 			}
 			else {
