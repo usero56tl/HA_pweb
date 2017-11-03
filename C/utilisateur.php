@@ -20,4 +20,13 @@
 		session_destroy();
 		header("Location:./index.php");
 	}
+
+	function inscription() {
+        if(count($_POST) == 0) {
+            require("./V/accueil.tpl");
+        }
+        else {
+            
+        }
+    }
 ?>
