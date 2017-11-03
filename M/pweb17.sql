@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mar 31 Octobre 2017 à 14:41
+-- Généré le :  Ven 03 Novembre 2017 à 22:51
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -104,7 +104,7 @@ CREATE TABLE `professeur` (
 
 INSERT INTO `professeur` (`id_prof`, `nom`, `prenom`, `email`, `login_prof`, `pass_prof`, `date_prof`, `bConnect`) VALUES
 (1, 'Prof', 'Esseur', 'professeur@parisdescartes.fr', 'professeur', 'professeur', '2017-10-01', 0),
-(2, 'Ilie', 'JM', 'jm.ilie@parisdescartes.fr', 'jmilie', 'jmilie', '2017-10-22', 1);
+(2, 'Ilie', 'JM', 'jm.ilie@parisdescartes.fr', 'jmilie', 'jmilie', '2017-10-22', 0);
 
 -- --------------------------------------------------------
 
@@ -175,8 +175,8 @@ INSERT INTO `reponse` (`id_rep`, `id_quest`, `texte_rep`, `bvalide`) VALUES
 (4, 1, '0', 0),
 (5, 2, '45', 0),
 (6, 2, '42', 1),
-(7, 2, '40', 0),
-(8, 2, '64', 0),
+(7, 2, '25', 0),
+(8, 2, '787', 0),
 (9, 3, '10', 0),
 (10, 3, '12', 0),
 (11, 3, '9', 1),
@@ -207,15 +207,16 @@ CREATE TABLE `test` (
   `id_prof` int(11) NOT NULL,
   `num_grpe` text COLLATE utf8_bin NOT NULL,
   `titre_test` text COLLATE utf8_bin NOT NULL,
-  `date_test` date NOT NULL
+  `date_test` date NOT NULL,
+  `bActif` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Contenu de la table `test`
 --
 
-INSERT INTO `test` (`id_test`, `id_prof`, `num_grpe`, `titre_test`, `date_test`) VALUES
-(0, 2, '206', 'Un peu de maths', '2017-10-25');
+INSERT INTO `test` (`id_test`, `id_prof`, `num_grpe`, `titre_test`, `date_test`, `bActif`) VALUES
+(0, 2, '206', 'Un peu de Math', '2017-10-25', 1);
 
 -- --------------------------------------------------------
 
@@ -338,7 +339,7 @@ ALTER TABLE `resultat`
 -- AUTO_INCREMENT pour la table `test`
 --
 ALTER TABLE `test`
-  MODIFY `id_test` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_test` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `theme`
 --
