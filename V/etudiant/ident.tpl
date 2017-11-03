@@ -1,4 +1,4 @@
-	<!doctype html>
+	<!-- <!doctype html>
 	<html lang="fr">
 		<head>
 		  <meta charset="utf-8">
@@ -16,7 +16,7 @@
 		<img src="./V/img/iut-paris.jpg" alt="iut paris descartes" >
 		
 		<body>
-			<form action="index.php?controle=etudiant&action=ident" method="post">
+			<form action="index.php?controle=professeur&action=ident" method="post">
 				<center>
 					<div>
 						<label for="id"> Identifiant : </label>
@@ -31,9 +31,33 @@
 						<input type="submit" button type="button" class="btn btn-outline-danger" value="Connexion"/>
 						<input type="reset" button type="button" class="btn btn-outline-danger" value="Annuler"/>
 					</div>
-					<p><?php echo($msg); ?></p>
 				</center>
 			</form>
 		
 		
-		</body>
+		</body> -->
+		
+<center>
+    <h1>QCM en Ligne</h1>
+		<img src="./V/img/iut-paris.jpg" alt="iut paris descartes" >
+</center>
+            <center>
+                <form action="index.php?controle=etudiant&action=ident" method="post">
+
+                        <div>
+                            <label for="id"> Identifiant : </label>
+                            <input name="user" type="text" id="id"/> 
+                        </div>
+
+                        <div>
+                            <label for="pwd"> Password : </label>
+                            <input name="pwd" type="password" id="pwd"/> 
+                        </div>
+                        <div class="button"> 
+                            <input type="submit" button type="button" class="btn btn-danger" value="Connexion"/>
+                            <input type="reset" button type="button" class="btn btn-danger" value="Annuler"/>
+                        </div>
+                        <p><?php echo($msg); ?></p>
+                </form>
+            </center>
+
