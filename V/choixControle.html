@@ -8,21 +8,27 @@
 		
 	</head>
 	<body>
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="brand">QCM Descartes</a>
-				</div>
-			</div>
-		</div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.php">QCM Descartes</a>
+                </div>
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </nav> 
 		
 		<h1>Bienvenue sur le QCM Descartes</h1>
-		</br>
+		<br>
 		<!-- Choix entre une connexion à un compte prof ou etudiant -->
 		<center>
-		<a href="index.php?controle=professeur&action=ident"><button type="default" class="btn"> Professeur </button></a>
-		<a href="index.php?controle=etudiant&action=ident"><button type="default" class="btn"> Etudiant </button></a>
+		  <a href="index.php?controle=professeur&action=ident"><button type="button" class="btn btn-danger"> Professeur </button></a>
+		  <a href="index.php?controle=etudiant&action=ident"><button type="button" class="btn btn-danger"> Etudiant </button></a>
 		</center>
+        <br>
+        <center>
+            <a href="index.php?controle=utilisateur&action=inscription"><button type="button" class="btn btn-danger"> Inscription </button></a>
+        </center>
 		<script src="js/bootstrap.min.js">
 	</body>
 </html>
