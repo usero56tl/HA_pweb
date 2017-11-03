@@ -14,9 +14,10 @@
 	<body>
 		<?php
 			// Chargement du menu de l'utilisateur connecté
-            if($controle != "") {
+            if($action != "ident") {
                 require("./V/" . $GLOBALS['controle'] . "/menu.tpl");
             }
+            else require("./V/utilisateur/menu.tpl");
 		?>
         
         <?php
@@ -25,6 +26,7 @@
 		
 			
 		
-		<script src="js/bootstrap.min.js">
+		<script src="./V/js/bootstrap.min.js">
+        <script src="./V/js/scripts.js">
 	</body>
 </html>
