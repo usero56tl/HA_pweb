@@ -28,7 +28,7 @@
 				}
 				else {
 					$msg = "Mot de passe ou identifiant incorrect";
-					require("./V/accueil.tpl");
+                    require("./V/accueil.tpl");
 				}
 			}
 			else {
@@ -40,7 +40,7 @@
 	}
 
 	function deconnectProf() {
-		require("./M/profDB.php");
+        require("./M/profDB.php");
         // Déconnexion de lu professeur de la base
         deconnectDB($_SESSION['profil']['login_prof'], $_SESSION['profil']['pass_prof']);
         
@@ -53,24 +53,128 @@
         require("./V/accueil.tpl");
     }
 
-	function creerQCM() {
-		
+	function questions() {
+		if(count($_POST) == 0) {
+            require("./M/profDB.php");
+            
+            // Recupere les questions et leurs réponses
+            $questions = fetchQuestions();
+            $reponses = fetchReponses();
+            
+            // Affichage des questions
+            require("./V/accueil.tpl");
+        }
+        else {
+            // Bouton modifier cliqué
+            
+            // Récupère l'id de la question à modifier
+            $questionAModif = array_keys($_POST);
+            $nextURL = "index.php?controle=professeur&action=modifQuestion&quest=" . $questionAModif[0];
+            header("Location:" . $nextURL);
+        }
 	}
 
-	function modifQCM() {
-		
+    function modifQuestion() {
+        require("./M/profDB.php");
+        
+        // Récupère la question à modifier via l'url
+        $idQuestionAModif = $_GET['quest'];
+        $question = fetchQuestion($idQuestionAModif);
+        
+        if(count($_POST) == 0) {
+            // Charge la question
+            require("./V/accueil.tpl");
+        }
+        else {
+            // Bouton modifier cliqué
+            
+            // change la question dans la bdd
+            changeQuestion($idQuestionAModif,
+                           (isset($_POST['questTitre'])?trim($_POST['questTitre']):$question['titre']), 
+                          (isset($_POST['questTexte'])?trim($_POST['questTexte']):$question['texte']));
+            
+            // Change les réponses dans la bdd
+            $i = 0;
+            while($question['reponses'][$i] != null) {
+                if(isset($_POST[$question['reponses'][$i]['id_rep']]) && $_POST[$question['reponses'][$i]['id_rep']] != "") {
+                    changeReponse($question['reponses'][$i]['id_rep'], trim($_POST[$question['reponses'][$i]['id_rep']]));
+                }
+                
+                $i++;
+            }
+            
+            $nextURL = "index.php?controle=professeur&action=questions";
+            header("Location:" . $nextURL);
+        }
+        
+    }
+
+	function tests() {
+        
+        if(count($_POST) == 0) {
+            require("./M/profDB.php");
+            $tests = fetchTests($_SESSION['profil']['id_prof']);
+            require("./V/accueil.tpl");
+        }
+        else {
+            // Bouton modifier cliqué
+            $testSelected = array_keys($_POST);
+            $nextURL = "index.php?controle=professeur&action=modifTest&test=" . $testSelected[0];
+            header("Location:" . $nextURL);
+        }
 	}
+
+    function modifTest() {
+        require("./M/profDB.php");
+        
+        // Récupère le test à modifier via l'url
+        $idTestModif = $_GET['test'];
+        $test = fetchTest($idTestModif);
+        $test['questions'] = fetchQuestionsDuTest($idTestModif);
+        
+        if(count($_POST) == 0) {
+            // Charge le test à changer
+            require("./V/accueil.tpl");
+        }
+        else {
+            $titre = ($_POST['testTitre'] != "")?trim($_POST['testTitre']):$test['titre_test'];
+            $groupe = ($_POST['testGrpe'] != "")?trim($_POST['testGrpe']):$test['num_grpe'];
+            
+            changeTest($idTestModif, $titre, $groupe);
+            
+            $nextURL = "index.php?controle=professeur&action=tests";
+            header("Location:" . $nextURL);
+        }
+    }
 
 	function lancerTest() {
-		require("./M/profDB.php");
         
-        $tests = fetchTests($_SESSION['profil']['id_prof']);
-        
-        require("./V/accueil.tpl");
+        if(count($_POST) == 0) {
+            // Aucun test selectionné
+            
+            require("./M/profDB.php");
+            $tests = fetchTests($_SESSION['profil']['id_prof']);
+            require("./V/accueil.tpl");
+        }
+        else {
+            // Bouton d'un test cliqué
+            
+            // Récupère l'id du test à lancer
+            $testSelected = array_keys($_POST);
+            $nextURL = "index.php?controle=professeur&action=suivreTest&test=" . $testSelected[0];
+            header("Location:" . $nextURL);
+        }
 	}
 
 	function suivreTest() {
-		
+        // Récupère l'id du test selectionné
+        $testEnCours = $_GET['test'];
+        
+        require("./M/ProfDB.php");
+        // Active le test dans la BDD
+        activerTest($testEnCours);
+        
+		require("./V/accueil.tpl");
 	}
 
 	function consultResult() {
