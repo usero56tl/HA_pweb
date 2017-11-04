@@ -31,10 +31,12 @@
 					
 					</tr>
 					
-				<?php
+			<?php
 					} //while
 				} //if 
-				?>
-	</table>
+				</table>
+				}
+			?>
+	
 
-<?php } ?>
+
