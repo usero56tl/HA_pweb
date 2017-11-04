@@ -1,6 +1,6 @@
 //marche pas encore...
-<?php function consultResultats(){ ?>
-	<?php require("./M/connect_db.php"); ?>
+<?php function consultResultats(){ 
+	require("./M/connect_db.php"); ?>
 			
 	<table class="form">
 			<h1>Résultats</h1>
