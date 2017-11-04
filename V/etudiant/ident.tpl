@@ -42,7 +42,7 @@
 		<img src="./V/img/iut-paris.jpg" alt="iut paris descartes" >
 </center>
             <center>
-                <form action="index.php?controle=etudiant&action=ident" method="post">
+                <form action="index.php?controle=professeur&action=ident" method="post">
 
                         <div>
                             <label for="id"> Identifiant : </label>
